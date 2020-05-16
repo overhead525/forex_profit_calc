@@ -1,9 +1,9 @@
 const Probability: any = require('./Probability');
 
-let portfolio: number = 150;
+let portfolio: number = parseFloat(process.argv[2]);
 const originalPortfolio: number = portfolio;
-const risk: number = 0.01;
-const reward: number = 0.05;
+const risk: number = 0.05;
+const reward: number = 0.25;
 const winRate: string = '55%';
 const lossRate: string = '45%';
 const findBreakEvenRate = (risk: number, reward: number): string => {
@@ -12,7 +12,7 @@ const findBreakEvenRate = (risk: number, reward: number): string => {
 }
 const breakEvenRate: string = findBreakEvenRate(risk, reward);
 
-const numOfTrades: number = 100;
+const numOfTrades: number = 50;  // number of trades during ONE trading season
 
 console.log(`
 Starting Portfolio = ${originalPortfolio}
@@ -20,7 +20,7 @@ Risk:Reward = ${risk*100}:${reward*100}
 Win Rate = ${winRate}
 Break-Even Rate = ${breakEvenRate}
 
-Simulating ${numOfTrades} trades...
+${/*Simulating ${numOfTrades} trades...*/null}
 `)
 
 const averageNumArray = (arrNums: Array<number>) => {

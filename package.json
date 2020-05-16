@@ -5,5 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "^13.13.4"
+  },
+  "scripts": {
+    "start": "ts-node index.ts"
   }
 }
