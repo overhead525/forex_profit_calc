@@ -88,4 +88,4 @@ const getSimulations = (numSimulations: number): void => {
     console.log('END');
 }
 
-getSimulations(1000000);
+// getSimulations(1000000);
